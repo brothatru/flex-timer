@@ -79,7 +79,7 @@ export const FlexTimer = (props: FlexTimerProps) => {
   };
 
   return (
-    <div className={styles.flexTimer}>
+    <div className={styles.flexTimer} data-cy='flex-timer'>
       <svg className={styles.progressRing} viewBox='0 0 100 100' onClick={handleClick}>
         <g className={styles.circleContainer}>
           <circle
@@ -92,7 +92,6 @@ export const FlexTimer = (props: FlexTimerProps) => {
             style={{ stroke: props.progressBarColor || 'black' }}
           ></circle>
           <path
-            id='base-timer-path-remaining'
             strokeDasharray={`${circleDashArray} 283`}
             className={`${styles.circle} ${
               circleDashArray === 283 ? styles.circleReverseAnimation : ''
@@ -103,6 +102,7 @@ export const FlexTimer = (props: FlexTimerProps) => {
             a 45,45 0 1,0 90,0
             a 45,45 0 1,0 -90,0
             '
+            data-cy='circle-progress-bar'
           ></path>
         </g>
       </svg>

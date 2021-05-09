@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "npx cypress run --headed"
   },
   "dependencies": {
+    "cypress": "^7.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
