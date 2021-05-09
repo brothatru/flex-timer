@@ -1,0 +1,32 @@
+$circle-stroke-width: 7px;
+
+.flexTimer {
+  cursor: pointer;
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.circleContainer {
+  fill: none;
+  stroke: none;
+}
+
+.timerProgress {
+  stroke-width: $circle-stroke-width;
+  stroke: black;
+}
+
+.circle {
+  stroke-width: $circle-stroke-width;
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 50ms linear all;
+  stroke: #aaaaaa;
+}
+
+.circleReverseAnimation {
+  transition: 300ms linear all;
+  stroke-dasharray: 283 283;
+}
